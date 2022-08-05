@@ -18,6 +18,9 @@
   --btn-back-hover-color: #188ce8;
   --card-back-personal-color: #fff;
   --card-back-portfolio-color: #fff;
+  --icon-color-back: #afb1b8;
+  --footer-icon-color: #ffffff;
+  --footer-icon-back: rgba(255, 255, 255, 0.1);
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -143,7 +146,18 @@ ul {
 /*-------------------- hero --------------------*/
 .hero {
   text-align: center;
-  background-color: var(--background-hero-color); /*тимчасово*/
+  background-color: var(--background-hero-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -248,17 +262,43 @@ ul {
   text-align: center;
   font-size: 16px;
   line-height: 1.18px;
+  margin-bottom: 16px;
 }
 .personal-title {
   margin-bottom: 50px;
 }
-.card-team {
+.personal-soc {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.personal-soc-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.personal-soc-icon {
+  fill: var(--icon-color-back);
+  width: 20px;
+  height: 20px;
+}
+.personal-soc-link:hover,
+.personal-soc-link:focus {
+  background-color: var(--accent-blue-color);
 }
 
+.personal-soc-link:hover .personal-soc-icon,
+.personal-soc-link:focus .personal-soc-icon {
+  fill: var(--btn-white-color);
+}
 /*-----------------------contacts-footer--------------------*/
 
 .footer {
-  background-color: var(--background-hero-color); /* тимчасово */
+  background-color: var(--background-hero-color);
+  display: flex; /* тимчасово */
 }
 .footer-logo {
   display: block;
@@ -288,6 +328,37 @@ ul {
 .footer-secsion {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+/*--------------------- footer-link --------------------*/
+.footer-soc {
+  margin-right: 878px;
+  margin-top: 72px;
+}
+.title-footer-soc {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--footer-text-white);
+}
+.link-footer-soc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--footer-icon-back);
+}
+.link-footer-soc:hover,
+.link-footer-soc:focus {
+  background-color: var(--accent-blue-color);
+}
+.icon-footer-soc {
+  width: 22px;
+  height: 22px;
+  fill: var(--footer-icon-color);
 }
 /*--------------------- portfolio --------------------*/
 .porfolio-list-button {
