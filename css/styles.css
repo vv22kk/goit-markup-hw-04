@@ -21,6 +21,9 @@
   --icon-color-back: #afb1b8;
   --footer-icon-color: #ffffff;
   --footer-icon-back: rgba(255, 255, 255, 0.1);
+  --border-client-icon: #afb1b8;
+  --client-icon: #afb1b8;
+  --background-benefits-icon: #f5f4fa;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -142,7 +145,10 @@ ul {
 .header-tel {
   color: var(--main-body-color);
 }
-
+.icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 /*-------------------- hero --------------------*/
 .hero {
   text-align: center;
@@ -202,6 +208,18 @@ ul {
 .benefits-list {
   display: flex;
   column-gap: 30px;
+}
+.benefits-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  width: 270px;
+  height: 120px;
+  background-color: var(--background-benefits-icon);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 .benefits-item {
   width: calc((100% - 90px) / 4);
@@ -294,11 +312,50 @@ ul {
 .personal-soc-link:focus .personal-soc-icon {
   fill: var(--btn-white-color);
 }
-/*-----------------------contacts-footer--------------------*/
+/*-----------------------client---------------------------- */
+.title-client {
+  margin-bottom: 50px;
+}
+.list-client {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border-client-icon);
+  border-radius: 4px;
+  width: 170px;
+  height: 92px;
+}
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-blue-color);
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--accent-blue-color);
+}
+.client-icon {
+  fill: var(--client-icon);
+  width: 106px;
+  height: 60px;
+}
 
-.footer {
+/*-----------------------contacts-footer--------------------*/
+.footer-section {
   background-color: var(--background-hero-color);
-  display: flex; /* тимчасово */
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.footer-secsion {
+  width: 270px;
+}
+.footer {
+  display: flex;
+  align-items: baseline;
 }
 .footer-logo {
   display: block;
@@ -329,15 +386,21 @@ ul {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-/*--------------------- footer-link --------------------*/
+/* ---------------------------------- */
 .footer-soc {
-  margin-right: 878px;
-  margin-top: 72px;
+  padding-left: 30px;
 }
-.title-footer-soc {
+.list-footer-soc {
+  display: flex;
+  gap: 10px;
+}
+
+.text-footer-soc {
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--footer-text-white);
@@ -346,10 +409,16 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--footer-icon-back);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .link-footer-soc:hover,
 .link-footer-soc:focus {
@@ -411,8 +480,6 @@ ul {
   border: 0;
   cursor: pointer;
 
-  font-family: inherit;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
