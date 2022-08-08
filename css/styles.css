@@ -357,7 +357,7 @@ button {
 /*-----------------------contacts-footer--------------------*/
 .footer-section {
   background-color: var(--background-hero-color);
-  max-width: 1600px;
+  min-width: 1600px;
   margin: 0 auto;
 }
 .footer-secsion {
@@ -466,9 +466,6 @@ button {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: 0;
-}
-.portfolio-img {
-  display: block;
 }
 .portfolio-title {
   margin-bottom: 4px;
