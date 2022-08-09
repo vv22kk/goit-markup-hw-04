@@ -377,6 +377,7 @@ button {
   color: var(--accent-blue-color);
 }
 .contact-item:not(:last-child) {
+  font-style: normal;
   margin-bottom: 9px;
 }
 .contact {
